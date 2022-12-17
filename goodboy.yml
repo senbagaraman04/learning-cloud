@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: goodboy
+spec:
+  template:
+    metadata:
+      name: goodboy-pod
+    spec:
+      containers:
+      - name: goodboy
+        image: senbagaraman04/goodboy
+        imagePullPolicy: Never
+      restartPolicy: Never
